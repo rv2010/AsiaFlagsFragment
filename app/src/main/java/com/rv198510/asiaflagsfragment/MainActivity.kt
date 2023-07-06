@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
@@ -24,11 +27,12 @@ class MainActivity : AppCompatActivity() , TextToSpeech.OnInitListener{
         replaceFragment(flags, flagsIndex)
 
 
-        val prevButton = findViewById<Button>(R.id.prevButton)
-        val nextButton = findViewById<Button>(R.id.nextButton)
+        val prevButton = findViewById<ImageButton>(R.id.prevButton)
+        val nextButton = findViewById<ImageButton>(R.id.nextButton)
 
 
         prevButton.isEnabled = false
+       // prevButton.isInvisible = true
         tts = TextToSpeech(this, this)
 
         btnSpeak!!.isEnabled = false
@@ -48,6 +52,7 @@ class MainActivity : AppCompatActivity() , TextToSpeech.OnInitListener{
 //                }
                 if (flagsIndex == 0) {
                     prevButton.isEnabled = false
+                   // prevButton.isInvisible
                 }
                 if (flagsIndex == flags.size - 2) {
                     nextButton.isEnabled = true

@@ -13,12 +13,12 @@ tools:context=".MainActivity">
     android:layout_alignParentStart="true"
     android:layout_height="wrap_content"
     android:layout_width="match_parent">
-    <Button android:id="@+id/prevButton"
+    <ImageButton android:id="@+id/prevButton"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:layout_width="0dp"
         android:layout_marginBottom="30dp"
-        android:foreground="@drawable/prev"
+        android:src="@drawable/prev"
         android:background="@color/transparentWhite"/>
     <Button
         android:layout_width="50dp"
@@ -27,13 +27,12 @@ tools:context=".MainActivity">
         android:layout_marginBottom="30dp"
         android:visibility="invisible"/>
 
-    <Button android:id="@+id/nextButton"
+    <ImageButton android:id="@+id/nextButton"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:layout_width="0dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/next_button_text"
-        android:foreground="@drawable/next"
+        android:src="@drawable/next"
         android:background="@color/transparentWhite"/>
 </LinearLayout>
 
